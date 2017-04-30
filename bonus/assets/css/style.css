@@ -8,9 +8,51 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-/* general */
+/* sticky footer styling */
+
+/* http://ryanfait.com/html5-sticky-footer/ */
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto -105px;
+}
+
+footer,
+.push {
+  height: 105px;
+}
+
+/* end sticky footer styling */
+
+/* start hover styling */
+
+#logo:hover,
+input[type=submit]:hover {
+  background: #5e7f7e;
+}
+
+nav a:hover {
+  color: #5e7f7e;
+}
+
+.social:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* end hover styling */
+
+/* general styling */
 
 .container {
   width: 100%;
@@ -156,48 +198,6 @@ h3,
   border: 1px solid #ddd;
 }
 
-/* portfolio page */
-
-.work {
-  position: relative;
-  float: left;
-  width: 274px;
-  margin: 20px 0 25px;
-  overflow: auto;
-}
-
-.work:nth-child(even) {
-  margin-right: 40px;
-}
-
-.work img {
-  width: 100%;
-  border: 0 none;
-  opacity: 0.8;
-}
-
-.work h3 {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 0;
-  font-weight: 300;
-  line-height: 30px;
-  color: #fff;
-  text-align: center;
-  background: #4aaaa5;
-  border-bottom: 0;
-}
-
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
-}
-
 /* contact page */
 
 #contact-form ul {
@@ -237,93 +237,3 @@ input[type=submit] {
   background: #4aaaa5;
   border: 0 none;
 }
-
-
-
-@media screen and (max-width: 980px) {
-
-	
-	.container {
-    	max-width: 730px;
-    	clear: both;
-	}
-
-
-	.main-section {
-    	float: left;
-    	width: 100%;
-    	max-width: 420px;
-
-	}
-
-	.work {
-		width: 360px;
-
-	}
-}
-
-
-@media screen and (max-width: 768px) {
-	
-	
-
-	.container,
-	.main-section {
-		clear: both;
-		width: 100%;
-		max-width: 730px;
-	}
-
-	.sidebar {
-		max-width: none;
-		margin-bottom: 40px;
-	}
-
-	.work {
-		width: 314px;
-
-	}
-
-}
-
-@media screen and (max-width: 640px) {
-
-	#logo {
-		width: 100%;
-	}
-
-	#masthead nav {
-		clear: both;
-		width: 100%;
-		max-width: 600px;
-		padding: 10px;
-		margin: 0;
-	}
-
-	#masthead nav a {
-		width: 30%;
-		text-align: center;
-		margin: 0;
-	}
-
-	#main-container {
-		width: 100%;
-		max-width: 600px;
-		padding-top: 170px;
-	}
-
-
-	.main-section {
-		width: 100%;
-		max-width: 600px;
-	}
-	
-	.work,
-	.auth-image {
-		width: 540px;
-		float: none;
-
-	}
-	
-}
-
